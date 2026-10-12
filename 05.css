@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+/* Main navigation */
+.navbar {
+    width: 100%;
+    background-color: #e9781c;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    position: relative;
+    border: 1px solid green;
+}
+
+.menu a {
+    display: block;
+    padding: 25px 30px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Hover effect */
+.menu a:hover,
+.menu a:focus {
+    background-color: green;
+    color: white;
+}
+
+/* Hide dropdown menus */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 250px;
+    list-style: none;
+    z-index: 1000;
+}
+
+/* Show first-level dropdown */
+.dropdown:hover > .submenu,
+.dropdown:focus-within > .submenu {
+    display: block;
+}
+
+/* Second-level dropdown */
+.submenu-right {
+    top: 0;
+    left: 100%;
+}
+
+/* Make submenu items full width */
+.submenu li,
+.submenu a {
+    width: 100%;
+}
+
+/* Page content */
+.content {
+    padding: 30px;
+}
+
+.content section {
+    min-height: 250px;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    scroll-margin-top: 20px;
+}
+
+.content h1,
+.content h2 {
+    margin-bottom: 15px;
+}
+
+/* Mobile display */
+@media (max-width: 600px) {
+    .menu a {
+        padding: 15px 10px;
+        font-size: 15px;
+    }
+
+    .submenu {
+        min-width: 170px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+}
